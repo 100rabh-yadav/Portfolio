@@ -1,0 +1,348 @@
+:root {
+    --primary: #ef233c;
+    --dark: #2b2d42;
+    --gray: #8d99ae;
+    --light: #edf2f4;
+    --white: #fff;
+    --radius: 8px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 66px;
+    height: 100vh;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.03);
+}
+
+.sidebar .logo {
+    margin: 20px 0 40px 0;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--primary);
+    background: var(--white);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 16px 0;
+}
+
+.sidebar a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    transition: color 0.2s, transform 0.2s;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    color: var(--primary);
+    background: var(--light);
+    transform: scale(1.15);
+}
+
+main {
+    margin-left: 66px;
+    min-height: 100vh;
+}
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin: 0 0 12px 0;
+}
+
+.hero h2 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin: 0 0 20px 0;
+}
+
+.hero p {
+    font-size: 1.07rem;
+    color: var(--gray);
+}
+
+.hero-socials {
+    margin: 24px 0 16px 0;
+}
+
+.hero-socials a {
+    color: var(--white);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.hero-socials a:hover {
+    color: var(--primary);
+    transform: scale(1.15);
+}
+
+.hero-contact-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 11px 30px;
+    border-radius: var(--radius);
+    font-size: 1.02rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: background 0.2s;
+}
+
+.hero-contact-btn:hover {
+    background: #d90429;
+}
+
+.section {
+    background: var(--white);
+    margin: 36px auto 0 auto;
+    max-width: 820px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    padding: 48px 32px;
+}
+
+.section h2 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.edu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    margin-top: 28px;
+}
+
+.edu-list > div {
+    background: var(--light);
+    padding: 18px 24px;
+    border-radius: var(--radius);
+    flex: 1;
+    min-width: 240px;
+    box-sizing: border-box;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.skills-grid > div {
+    background: var(--light);
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    min-width: 180px;
+}
+
+.skills-grid h4 {
+    margin: 0 0 8px 0;
+    color: var(--dark);
+    font-size: 1rem;
+}
+
+.work-item {
+    background: var(--light);
+    padding: 18px 28px;
+    border-radius: var(--radius);
+    margin-top: 20px;
+}
+
+.work-item h3 {
+    margin: 0;
+    color: var(--dark);
+    font-size: 1.25rem;
+}
+
+.work-item h3 span {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.work-duration {
+    color: var(--gray);
+    font-size: 0.98rem;
+    margin-bottom: 9px;
+    display: block;
+}
+
+.work-item ul {
+    margin: 12px 0 0 18px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.project-card {
+    background: var(--light);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 16px 22px;
+    flex: 1;
+    min-width: 260px;
+    box-sizing: border-box;
+}
+
+.project-card h4 {
+    margin: 0 0 8px 0;
+    color: var(--primary);
+}
+
+.project-meta {
+    display: block;
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.achievements {
+    margin-top: 42px;
+}
+
+.achievements h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.achievements ul {
+    margin: 0 0 0 18px;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-info {
+    margin: 28px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 370px;
+}
+
+.contact-info div {
+    font-size: 1.1rem;
+}
+
+.contact-info i {
+    color: var(--primary);
+    margin-right: 7px;
+}
+
+footer {
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    main {
+        margin-left: 0;
+    }
+    .sidebar {
+        position: static;
+        width: 100vw;
+        height: 56px;
+        flex-direction: row;
+        box-shadow: none;
+        justify-content: flex-start;
+    }
+    .sidebar .logo {
+        margin: 0 20px 0 0;
+    }
+    .sidebar ul {
+        flex-direction: row;
+        width: 100vw;
+        margin-left: 12px;
+    }
+    .sidebar li {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .section, .hero-content {
+        padding: 22px 5vw;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .edu-list {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .project-grid {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section, .hero-content {
+        padding: 10px 2vw;
+    }
+    .sidebar .logo {
+        font-size: 1.5rem;
+        width: 32px;
+        height: 32px;
+    }
+}
